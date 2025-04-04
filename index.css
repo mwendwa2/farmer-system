@@ -1,0 +1,219 @@
+/* Root Variables */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #50E3C2;
+    --danger-color: #EF5350;
+    --warning-color: #FFC107;
+    --background-gradient: linear-gradient(45deg, #283E51, #4A90E2);
+    --text-color: #333;
+    --container-bg: rgba(255, 255, 255, 0.85);
+    --button-radius: 5px;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background-gradient);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Container */
+  .container {
+    background-color: var(--container-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--shadow-color);
+    max-width: 800px;
+    width: 100%;
+    margin: 20px;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  /* Notification Container */
+  #notificationContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  /* Notification styling */
+  .notification {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: var(--button-radius);
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    opacity: 0.9;
+  }
+  
+  /* Menu */
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .menu button {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    margin: 5px;
+    flex: 1;
+    max-width: calc(100% - 10px);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .menu button:hover {
+    background: #357ABD;
+    transform: scale(1.05);
+  }
+  
+  .menu button.active {
+    color: var(--warning-color);
+    text-decoration: underline;
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Groups */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: var(--button-radius);
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: var(--primary-color);
+  }
+  
+  /* Buttons */
+  button {
+    width: 100%;
+    padding: 12px;
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background: #45C1A1;
+    transform: scale(1.05);
+  }
+  
+  /* Sections */
+  .section {
+    display: none;
+  }
+  
+  /* Sign-Up Form */
+  #signupForm {
+    display: block;
+  }
+  
+  /* Neumorphic 3D style for the Sign-Up Form */
+  .neumorphic-card {
+    background: #e0e5ec;
+    border-radius: 20px;
+    box-shadow: -8px -8px 16px #ffffff, 8px 8px 16px #babecc;
+    width: 350px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+  }
+  .neumorphic-card h1 {
+    margin-bottom: 20px;
+  }
+  .neumorphic-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .neumorphic-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: #e0e5ec;
+    box-shadow: inset -5px -5px 10px #ffffff, inset 5px 5px 10px #babecc;
+    text-align: center;
+  }
+  .neumorphic-button {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background: #e0e5ec;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px #babecc;
+    transition: all 0.2s ease;
+  }
+  .neumorphic-button:active {
+    box-shadow: inset -5px -5px 10px #ffffff, inset 5px 5px 10px #babecc;
+  }
+  
+  /* Sales List - styling for each sale entry */
+  #salesList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    border-radius: var(--button-radius);
+    border: 1px solid #ddd;
+  }
+  
+  .sale-actions button {
+    margin-left: 5px;
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .menu {
+      flex-direction: column;
+    }
+  }
+  
